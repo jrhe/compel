@@ -4,7 +4,7 @@
 
 ## Attention Weights
 Append a word or phrase with `-` or `+`, or a weight between `0` and `2` (`1` is default), to decrease or increase the 
-importance of that word/phrase in the generated image.
+importance of that word/phrase in the generated image. In practice upweighting tops out at around `1.6` before noise/distortion are encountered. Where upweighting tops out depends on the guidance scale/classifier free guidance (CFG) parameter used, and the commonality of the tokens being weighted (e.g. "Cat" will top out sooner than something more obscure).
 
 You can assign weights to multiple words by using parentheses. For e.g. `a man (picking apricots)1.5` or `a man (picking apricots)++`
 
